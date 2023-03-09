@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lilita One', cursive;
+    background-color: white;
+}
+
+a {
+    color: white;
+}
+
+.header {
+    background-color: rgb(13, 14, 18);
+    opacity: 0.8;
+    box-shadow: 0.0625rem 0.0625rem 0.25rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: rgb(13, 14, 18);
+    opacity: 0.8;
+}
+
+.header li a {
+    display: block;
+    padding: 1.25rem 1.25rem;
+    border-right: 1px solid rgb(13, 14, 18);
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: white;
+    color: black
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 0.625rem 1.25rem;
+    text-decoration: none;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 1.75rem 1.25rem;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 0.125rem;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 1.125rem;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 0.3125rem;
+}
+
+.header .menu-icon .navicon:after {
+    top: -0.3125rem;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 15rem;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.Home-Page {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    background-image: url(BG.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Home-Page h1 {
+    display: flex;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    font-size: 4.5vw;
+    letter-spacing: 0.15em;
+    margin-left: 4.0625rem;
+    align-items: center;
+    justify-content: left;
+}
+
+.menukaart {
+    display: flex;
+    justify-content: center;
+    padding: 1.875rem;
+    height: 100vh;
+}
+
+.menukaart img {
+    max-width: 100%;
+    height: auto;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    margin: 0.5rem 0;
+    display: inline-block;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.875rem 1.25rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.input-field {
+    border-radius: 0.3125rem;
+    background-color: #f2f2f2;
+    padding: 1.25rem;
+    height: 100vh;
+    padding-top: 4.375rem;
+}
+
+.form, .sub {
+    margin-bottom: 1.25rem;
+}
+
+.burger-images { 
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.images img {
+    max-width: 50%;
+    height: auto;
+}
+
+.about {
+    height: 100vh;
+}
+
+.text1 {
+    font-size: 1.5vw;
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+    padding-top: 4.375rem;
+}
+
+.text2, .text3 {
+    font-size: 1.5vw;
+    margin-left: 3.125rem;
+    margin-right: 3.125rem;
+}
+
+.about img {
+    max-width: 55%;
+    height: auto;
+    margin-top: 3.125rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 1.25rem 1.875rem;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
